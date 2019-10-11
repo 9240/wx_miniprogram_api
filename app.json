@@ -1,8 +1,14 @@
 {
   "pages": [
+    "pages/file/file",
     "pages/index/index",
     "pages/storage/storage",
     "pages/map/map",
+    "pages/picture/picture",
+    "pages/video/video",
+    "pages/voice/voice",
+    "pages/backgroundAudio/backgroundAudio",
+    
     "pages/internet/internet",
     "pages/interface/interface",
     "pages/base/base",

@@ -1,0 +1,11 @@
+<view class="margin-sm">
+  <view class="grid col-4 grid-square">
+    <view wx:for="{{chooseImageUrl}}" wx:key="{{index}}">
+      <image src="{{item}}" style="height:200rpx;"></image>
+    </view>
+  </view>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="chooseImage">选择图片</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" disabled="{{previewUrls.length === 0?true:false}}" bindtap="previewImage">预览图片</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" disabled="{{previewUrls.length === 0?true:false}}" bindtap="getImageInfo">获取第一张图片信息</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" disabled="{{previewUrls.length === 0?true:false}}" bindtap="saveImageToPhotosAlbum">保存图片到系统相册</button>
+</view>

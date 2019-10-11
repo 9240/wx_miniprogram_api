@@ -5,11 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
+    map:null,
     markers: [{
       iconPath: '/assets/32794429.jpg',
       id: 0,
-      latitude: 22.721658,
-      longitude: 114.06030,
+      latitude: 23.099994,
+      longitude: 113.324520,
       width: 30,
       height: 30
     }],
@@ -18,8 +19,8 @@ Page({
         longitude: 113.3245211,
         latitude: 23.10229
       }, {
-        longitude: 113.324520,
-        latitude: 40.21229
+          longitude: 113.324520,
+          latitude: 23.21229
       }],
       color: "#0f0",
       width: 10,
@@ -56,7 +57,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      map: wx.createMapContext('map', this)
+    })
   },
 
   /**
@@ -101,5 +104,87 @@ Page({
   },
   controltap(e) {
     console.log(e.controlId)
+  },
+  getCenterLocation(){
+    this.data.map.getCenterLocation({
+      success(res){
+        console.log(res)
+        showModal('当前经纬度',JSON.stringify(res))
+      },
+      fail(err){
+        console.log("获取当前地图中心经纬度出错："+err)
+      }
+    })
+  },
+  getRegion(){
+    this.data.map.getRegion({
+      success(res){
+        showModal('当前地图视野范围', JSON.stringify(res))
+      }
+    })
+  },
+  getRotate(){
+    this.data.map.getRotate({
+      success(res){
+        console.log(res)
+        showModal('当前地图旋转角', JSON.stringify(res))
+      },
+      fail(err){
+        console.log(err)
+      }
+    })
+  },
+  getScale(){
+    this.data.map.getScale({
+      success(res){
+        showModal('当前地图缩放级别',JSON.stringify(res))
+      }
+    })
+  },
+  getSkew(){
+    this.data.map.getSkew({
+      success(res){
+        showModal('当前地图倾斜角',JSON.stringify(res))
+      }
+    })
+  },
+  includePoints(){
+    this.data.map.includePoints({
+      success(res){
+        console.log(res)
+        showModal('展示所有经纬度',JSON.stringify(res))
+      }
+    })
+  },
+  moveToLocation(){
+    this.data.map.moveToLocation({
+      success(res){
+        console.log(res)
+      }
+    })
+  },
+  translateMarker(){
+    this.data.map.translateMarker({
+      markerId:0,
+      destination:{
+        latitude: 22.721740000000008,
+        longitude: 114.06030999999997
+      },
+      autoRotate:true,
+      duration:2000,
+      animationEnd(){
+        console.log('动画结束')
+      },
+      success(res){
+        console.log(res)
+      }
+    })
   }
 })
+
+function showModal(title,content){
+  wx.showModal({
+    title: title,
+    content: content,
+  })
+}

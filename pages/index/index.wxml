@@ -30,4 +30,54 @@
       <text class='text-grey'>地图</text>
     </view>
   </view>
+  <view class="cu-item arrow" bindtap="goToPicture">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>图片</text>
+    </view>
+  </view>
+  <view class="cu-item arrow" bindtap="goToVideo">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>视频</text>
+    </view>
+  </view>
+  <view class="cu-item arrow" bindtap="goToVoice">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>音频</text>
+    </view>
+  </view>
+  <view class="cu-item arrow" bindtap="goToBackgroundAudio">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>背景音频</text>
+    </view>
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class='action'>
+    <text class='icon-title text-orange '></text> 画布
+  </view>
+</view>
+<view class="cu-list menu">
+  <view class="cu-item arrow" bindtap="goToCanvas">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>关闭监听实时位置变化</text>
+    </view>
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class='action'>
+    <text class='icon-title text-orange '></text> 文件
+  </view>
+</view>
+<view class="cu-list menu">
+  <view class="cu-item arrow" bindtap="goToFile">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>保存文件</text>
+    </view>
+  </view>
 </view>

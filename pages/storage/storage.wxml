@@ -10,5 +10,4 @@
   <button class="cu-btn round margin-sm bg-blue shadow" bindtap="clsStorage">异步清除storage</button>
   <button class="cu-btn round margin-sm bg-blue shadow" bindtap="getStorageInfoSync">同步获取storageinfo</button>
   <button class="cu-btn round margin-sm bg-blue shadow" bindtap="getStorageInfo">异步获取storageinfo</button>
-  
 </view>

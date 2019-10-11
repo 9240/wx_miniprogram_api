@@ -74,5 +74,35 @@ Page({
     wx.navigateTo({
       url: '/pages/map/map',
     })
+  },
+  goToPicture(){
+    wx.navigateTo({
+      url: '/pages/picture/picture',
+    })
+  },
+  goToVideo(){
+    wx.navigateTo({
+      url: '/pages/video/video',
+    })
+  },
+  goToVoice(){
+    wx.navigateTo({
+      url: '/pages/voice/voice',
+    })
+  },
+  goToBackgroundAudio(){
+    wx.navigateTo({
+      url: '/pages/backgroundAudio/backgroundAudio',
+    })
+  },
+  goToCanvas(){
+    wx.navigateTo({
+      url: '/pages/canvas/canvas',
+    })
+  },
+  goToFile(){
+    wx.navigateTo({
+      url: '/pages/file/file',
+    })
   }
 })

@@ -1,0 +1,8 @@
+<view class="margin-sm">
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="downloadFile" loading="{{isLoading}}">下载pdf文件</button>
+  <button disabled="{{!temppdfUrl}}" class="cu-btn round margin-sm bg-blue shadow" bindtap="openFile">打开pdf文件</button>
+  <button disabled="{{!temppdfUrl}}" class="cu-btn round margin-sm bg-blue shadow" bindtap="saveFile">保存pdf文件</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="getSavedFileList">获取本地缓存文件列表</button>
+  <button disabled="{{!savedFileList}}" class="cu-btn round margin-sm bg-blue shadow" bindtap="getSavedFileInfo">获取第一个本地缓存文件信息</button>
+  <button disabled="{{!savedFileList}}" class="cu-btn round margin-sm bg-blue shadow" bindtap="removeSavedFile">删除第一个本地缓存文件</button>
+</view>
