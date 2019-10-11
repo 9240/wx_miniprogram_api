@@ -1,0 +1,8 @@
+<!--pages/base/base.wxml-->
+<text style="display:block;">pages/base/base.wxml</text>
+<view class="margin-sm">
+  <button class="cu-btn round margin-sm bg-green shadow" bindtap="getSystemInfo">获取系统信息</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="openDebug">打开调试</button>
+  <button class="cu-btn round margin-sm bg-olive shadow" bindtap="setInterval" disabled="{{isDisable}}">开启定时器</button>
+  <button class="cu-btn round margin-sm bg-cyan shadow" bindtap="clsInterval" disabled="{{!isDisable}}">关闭定时器</button>{{setInterval}}
+</view>

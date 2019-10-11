@@ -1,0 +1,6 @@
+<!--pages/canvas/canvas.wxml-->
+<text>pages/canvas/canvas.wxml</text>
+<button class="cu-btn round margin-sm bg-yellow shadow" bindtap="chooseimg">选择图片</button>
+<view style="width:600px;height:600px;">
+  <canvas style="width: 600px; height: 600px;" canvas-id="mycanvas"></canvas>
+</view>

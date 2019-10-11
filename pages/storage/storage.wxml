@@ -1,0 +1,14 @@
+<!--pages/storage/storage.wxml-->
+<view class="margin-sm">
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="setStorageSync">同步设置storage</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="setStorage">异步设置storage</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="rmStorageSync">同步删除storage</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="rmStorage">异步删除storage</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="getStorageSync">同步获取storage</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="getStorage">异步获取storage</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="clsStorageSync">同步清除storage</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="clsStorage">异步清除storage</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="getStorageInfoSync">同步获取storageinfo</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="getStorageInfo">异步获取storageinfo</button>
+  
+</view>

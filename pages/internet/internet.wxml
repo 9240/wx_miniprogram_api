@@ -1,0 +1,60 @@
+<!--pages/internet/internet.wxml-->
+<view class="margin-sm">
+  <view class="text-center">
+    <text class="text-black text-bold">发起请求</text>
+  </view>
+  <view class="margin-sm">
+    <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="request">请求</button>
+  </view>
+  <view class="text-center">
+    <text class="text-black text-bold">下载</text>
+  </view>
+  <view class="margin-sm">
+    <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="downLoadFile">下载文件</button>
+    <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="cancelDownLoad">取消下载</button>
+  </view>
+  <progress percent="{{downLoadPercent}}" show-info active active-mode="forwards" />
+  <view class="fl">
+    总大小：{{totalBytesExpectedToWrite}}b
+  </view>
+  <view class="fr">
+    已下载大小：{{totalBytesWritten}}b
+  </view>
+
+  <view class="text-center margin-top padding-top">
+    <text class="text-black text-bold">下载</text>
+  </view>
+  <view class="margin-sm">
+    <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="uploadLoadFile">上传文件</button>
+    <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="cancelUploadLoad">取消上传</button>
+  </view>
+  <progress percent="{{uploadPercent}}" show-info active active-mode="forwards" />
+  <view class="fl">
+    总大小：{{totalBytesExpectedToSend}}b
+  </view>
+  <view class="fr">
+    已上传大小：{{totalBytesSent}}b
+  </view>
+  <view class="text-center margin-top padding-top">
+    <text class="text-black text-bold">websocket</text>
+  </view>
+  <view class="margin-sm">
+    <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="connectSocket" disabled="{{socketOpen}}">建立连接</button>
+    <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="closesocket" disabled="{{!socketOpen}}">断开连接</button>
+    <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="sendMsg">发送消息</button>
+    <view class="margin-top">
+      <view class="fl">
+        <view>待发消息：{{socketMsgQueue.length}}</view>
+        <view wx:for="{{socketMsgQueue}}" wx:key="{{index}}">
+          <view>{{item}}</view>
+        </view>
+      </view>
+      <view class="fr">
+        <view>返回消息：{{resData.length}}</view>
+        <view wx:for="{{resData}}" wx:key="{{index}}">
+          <view>{{item}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

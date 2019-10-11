@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="cu-list menu">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <view class="cu-item arrow" bindtap="goToStorage">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>数据缓存</text>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class='action'>
+    <text class='icon-title text-orange '></text> 媒体
+  </view>
+</view>
+<view class="cu-list menu">
+  <view class="cu-item arrow" bindtap="goToMap">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>地图</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,59 @@
+<!--pages/interface/interface.wxml-->
+<view class="text-center">
+  <text class="text-black text-bold">交互</text>
+</view>
+<view class="margin-sm">
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="showToast">提示框</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="showModal">模态框</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="openLoading">openLoading</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="closeLoading">closeLoading</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="showActionSheet">操作菜单</button>
+</view>
+<view class="text-center">
+  <text class="text-black text-bold">导航栏</text>
+</view>
+<view class="margin-sm">
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="showNavigationBarLoading">显示导航条加载动画</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="hideNavigationBarLoading">关闭导航条加载动画</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="setNavigationBarTitle">设置当前页面的标题</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="setNavigationBarColor">设置当前页面的标题颜色</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="hideHomeButton" disabled="true">隐藏返回首页按钮(此页面不可操作)</button>
+</view>
+<view class="text-center">
+  <text class="text-black text-bold">Tab Bar</text>
+</view>
+<view class="margin-sm">
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="showTabBarRedDot">TabBar加红点</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="hideTabBarRedDot">TabBar隐藏红点</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="showTabBar">showTabBar</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="hideTabBar">hideTabBar</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="setTabBarStyle">setTabBarStyle</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="setTabBarItem">setTabBarItem</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="setTabBarBadge">setTabBarBadge</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="removeTabBarBadge">removeTabBarBadge</button>
+</view>
+<view class="text-center">
+  <text class="text-black text-bold">下拉刷新</text>
+</view>
+<view class="margin-sm">
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="startPullDownRefresh">开始下拉刷新</button>
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="stopPullDownRefresh">停止下拉刷新</button>
+</view>
+<view class="text-center">
+  <text class="text-black text-bold">滚动</text>
+</view>
+<view class="margin-sm">
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="pageScrollTo">pageScrollTo</button>
+</view>
+<view class="text-center">
+  <text class="text-black text-bold">菜单</text>
+</view>
+<view class="margin-sm">
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="getMenuButtonBoundingClientRect">获取胶囊按钮的信息</button>
+</view>
+<view class="text-center">
+  <text class="text-black text-bold">窗口</text>
+</view>
+<view class="margin-sm">
+  <button class="cu-btn round margin-sm bg-yellow shadow" bindtap="onWindowResize">监听窗口尺寸变化</button>
+</view>
