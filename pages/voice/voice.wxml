@@ -1,2 +1,6 @@
-<!--pages/voice/voice.wxml-->
-<text>pages/voice/voice.wxml</text>
+<view class="margin-sm">
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="play">播放</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="pause">暂停</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="stop">停止</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="destory">销毁</button>
+</view>

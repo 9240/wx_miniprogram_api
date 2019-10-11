@@ -54,6 +54,12 @@
       <text class='text-grey'>背景音频</text>
     </view>
   </view>
+  <view class="cu-item arrow" bindtap="goToRecord">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>录音</text>
+    </view>
+  </view>
 </view>
 <view class="cu-bar bg-white solid-bottom margin-top">
   <view class='action'>
@@ -64,7 +70,7 @@
   <view class="cu-item arrow" bindtap="goToCanvas">
     <view class='content'>
       <text class='icon-circlefill text-grey'></text>
-      <text class='text-grey'>关闭监听实时位置变化</text>
+      <text class='text-grey'>canvas</text>
     </view>
   </view>
 </view>

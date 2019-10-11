@@ -104,5 +104,10 @@ Page({
     wx.navigateTo({
       url: '/pages/file/file',
     })
+  },
+  goToRecord(){
+    wx.navigateTo({
+      url: '/pages/record/record',
+    })
   }
 })

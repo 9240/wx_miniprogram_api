@@ -1,3 +1,6 @@
 <view class="margin-sm">
   <button class="cu-btn round margin-sm bg-blue shadow" bindtap="play">播放</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="pause">暂停</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="stop">停止</button>
+  <slider min="0" max="{{max}}" value="{{value}}"></slider>
 </view>

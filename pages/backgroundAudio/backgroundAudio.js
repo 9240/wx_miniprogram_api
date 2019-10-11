@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    backgroundAudioManager:null
+    backgroundAudioManager:null,
+    max:null,
+    value:null
   },
 
   /**
@@ -27,16 +29,22 @@ Page({
    */
   onShow: function () {
     this.setData({
-      backgroundAudioManager:wx.getBackgroundAudioManager({
-        src:'http://113.96.101.14/amobile.music.tc.qq.com/C400003O1yMi1jZaol.m4a?guid=9901088120&vkey=6A9B8C0D5A41C6A6E32C3F235DFA82CBF59AC8A09EE14D878915EC13F5F9AD7E61F0FC1BDD51A9EFEF8DCDAC1427E159427636B74E980006&uin=0&fromtag=66',
-        startTime:0,
-        title:'盗将行',
-        epname:'专辑名',
-        singer:'馅儿',
-        coverImgUrl:'https://y.gtimg.cn/music/photo_new/T002R300x300M000000MzYm21RBpgw.jpg?max_age=2592000',
-        webUrl:'https://y.qq.com/portal/player.html',
-        protocol:'http',
-      })
+      backgroundAudioManager: wx.getBackgroundAudioManager()
+    }),
+    this.data.backgroundAudioManager.src = 'http://113.96.101.14/amobile.music.tc.qq.com/C400003O1yMi1jZaol.m4a?guid=9901088120&vkey=6A9B8C0D5A41C6A6E32C3F235DFA82CBF59AC8A09EE14D878915EC13F5F9AD7E61F0FC1BDD51A9EFEF8DCDAC1427E159427636B74E980006&uin=0&fromtag=66'
+    this.data.backgroundAudioManager.startTime = 0
+    this.data.backgroundAudioManager.title = '盗将行'
+    this.data.backgroundAudioManager.epname = '专辑名'
+    this.data.backgroundAudioManager.singer = '馅儿'
+    this.data.backgroundAudioManager.coverImgUrl = 'https://y.gtimg.cn/music/photo_new/T002R300x300M000000MzYm21RBpgw.jpg?max_age=2592000'
+    this.data.backgroundAudioManager.webUrl = 'https://y.qq.com/portal/player.html'
+    this.data.backgroundAudioManager.protocol = 'http'
+    this.data.backgroundAudioManager.onCanplay(()=>{
+      //无法获取this.data.backgroundAudioManager.duration
+      // console.log(this.data.backgroundAudioManager.duration)
+      // this.setData({
+      //   max: 100,
+      // })
     })
   },
 
@@ -76,5 +84,11 @@ Page({
   },
   play(){
     this.data.backgroundAudioManager.play()
+  },
+  pause(){
+    this.data.backgroundAudioManager.pause()
+  },
+  stop(){
+    this.data.backgroundAudioManager.stop()
   }
 })
