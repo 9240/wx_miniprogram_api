@@ -1,5 +1,13 @@
 <!--index.wxml-->
 <view class="cu-list menu">
+  <view class="cu-item arrow" bindtap="goToRouter">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>路由</text>
+    </view>
+  </view>
+</view>
+<view class="cu-list menu">
   <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -60,30 +68,50 @@
       <text class='text-grey'>录音</text>
     </view>
   </view>
-</view>
-<view class="cu-bar bg-white solid-bottom margin-top">
-  <view class='action'>
-    <text class='icon-title text-orange '></text> 画布
+  <view class="cu-item arrow" bindtap="goToEditor">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>富文本</text>
+    </view>
+  </view>
+  <view class="cu-item arrow" bindtap="goToCamera">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>相机</text>
+    </view>
   </view>
 </view>
+
 <view class="cu-list menu">
   <view class="cu-item arrow" bindtap="goToCanvas">
     <view class='content'>
       <text class='icon-circlefill text-grey'></text>
-      <text class='text-grey'>canvas</text>
+      <text class='text-grey'>画布</text>
     </view>
   </view>
 </view>
-<view class="cu-bar bg-white solid-bottom margin-top">
-  <view class='action'>
-    <text class='icon-title text-orange '></text> 文件
-  </view>
-</view>
+
 <view class="cu-list menu">
   <view class="cu-item arrow" bindtap="goToFile">
     <view class='content'>
       <text class='icon-circlefill text-grey'></text>
-      <text class='text-grey'>保存文件</text>
+      <text class='text-grey'>文件</text>
+    </view>
+  </view>
+</view>
+<view class="cu-list menu">
+  <view class="cu-item arrow" bindtap="goToShare">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>分享</text>
+    </view>
+  </view>
+</view>
+<view class="cu-list menu">
+  <view class="cu-item arrow" bindtap="goToOpenApi">
+    <view class='content'>
+      <text class='icon-circlefill text-grey'></text>
+      <text class='text-grey'>开放接口</text>
     </view>
   </view>
 </view>

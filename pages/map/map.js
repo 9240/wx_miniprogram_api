@@ -179,6 +179,16 @@ Page({
         console.log(res)
       }
     })
+  },
+  startLocationUpdateBackground(){
+    wx.startLocationUpdateBackground({
+      success(res){
+        console.log(res)
+      },
+      fail(err){
+        console.log(err)
+      }
+    })
   }
 })
 

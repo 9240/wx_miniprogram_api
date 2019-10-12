@@ -1,2 +1,6 @@
-<!--pages/router/router.wxml-->
-<text>pages/router/router.wxml</text>
+<view class="margin-sm">
+  <button type="primary" bindtap="switchTab" style="font-size:14px;">switchTa：关闭其他所有非tabbar页面</button>
+  <button type="primary" bindtap="reLaunch" style="font-size:14px;margin-top:10px;">reLaunch：关闭所有页面，打开某个页面</button>
+  <button type="primary" bindtap="redirectTo" style="font-size:14px;margin-top:10px;">redirectTo：关闭当前页面，打开某个非tabbar页面</button>
+  <button type="primary" bindtap="navigateTo" style="font-size:14px;margin-top:10px;">navigateTo：关闭当前页面，打开某个非tabbar页面,可返回</button>
+</view>

@@ -1,0 +1,6 @@
+<view class="margin-sm">
+  <button open-type='share' class="cu-btn round margin-sm bg-blue shadow">转发</button>
+  <!-- <button open-type='share' class="cu-btn round margin-sm bg-blue shadow" bindtap="updateShareMenu">更新转发属性</button> -->
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="hideShareMenu">隐藏转发按钮</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="showShareMenu">显示转发按钮</button>
+</view>

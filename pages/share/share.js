@@ -1,4 +1,4 @@
-// pages/router/router.js
+// pages/share/share.js
 Page({
 
   /**
@@ -61,55 +61,42 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: 'z9240小程序',
+      desc: '微信小程序api',
+      imageUrl: 'http://9240.fun/upload/1570173116416.jpg',
+      path: '/pages/internet/internet'
+    }
   },
-  switchTab(){
-    //app.json需定义tabbar字段,url不能带参数
-    wx.switchTab({
-      url: '/pages/base/base',
-      success(res){
+  // updateShareMenu(){
+  //   wx.updateShareMenu({
+  //     withShareTicket: false,
+  //     success: function(res) {},
+  //     fail: function(res) {},
+  //     complete: function(res) {},
+  //   })
+  // },
+  hideShareMenu(){
+    wx.hideShareMenu({
+      success: function(res) {
         console.log(res)
       },
-      fail(err){
-        console.log(err)
-      }
-    })
-  },
-  reLaunch(){
-    //可以带queryString,可以跳转到tabbar页面
-    wx.reLaunch({
-      url: '/pages/file/file',
-      success(res) {
+      fail: function(res) {
         console.log(res)
       },
-      fail(err) {
-        console.log(err)
-      }
+      complete: function(res) {},
     })
   },
-  redirectTo(){
-    //不能跳转到tabbar
-    wx.redirectTo({
-      url: '/pages/backgroundAudio/backgroundAudio',
-      success(res) {
+  showShareMenu(){
+    wx.showShareMenu({
+      withShareTicket: false,
+      success: function(res) {
         console.log(res)
       },
-      fail(err) {
-        console.log(err)
-      }
-    })
-  },
-  navigateTo(){
-    wx.navigateTo({
-      url: '/pages/camera/camera?sendData=1',
-      events:{
-        sendData(data){
-          console.log(data)
-        }
+      fail: function(res) {
+        console.log(res)
       },
-      success(res){
-        res.eventChannel.emit('sendData',{data:'somedata'})
-      }
+      complete: function(res) {},
     })
   }
 })

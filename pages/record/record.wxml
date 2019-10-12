@@ -1,5 +1,5 @@
 <view class="margin-sm">
-  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="getRecManager">getRecorderManager</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="getRecManager">获取录音实例</button>
   <button class="cu-btn round margin-sm bg-blue shadow" bindtap="play">开始录音</button>
   <button class="cu-btn round margin-sm bg-blue shadow" bindtap="stop">停止录音</button>
 </view>

@@ -1,0 +1,4 @@
+<view class="margin-sm">
+  <button type="primary" bindtap="login">登录</button>
+  <button type="primary" bindtap="chooseAddress" class="margin-top">获取地址</button>
+</view>

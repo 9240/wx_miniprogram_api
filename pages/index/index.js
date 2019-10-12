@@ -65,6 +65,11 @@ Page({
 
 
 
+  goToRouter(){
+    wx.navigateTo({
+      url: '/pages/router/router',
+    })
+  },
   goToStorage(){
     wx.navigateTo({
       url: '/pages/storage/storage',
@@ -108,6 +113,26 @@ Page({
   goToRecord(){
     wx.navigateTo({
       url: '/pages/record/record',
+    })
+  },
+  goToEditor(){
+    wx.navigateTo({
+      url: '/pages/editor/editor',
+    })
+  },
+  goToCamera(){
+    wx.navigateTo({
+      url: '/pages/camera/camera',
+    })
+  },
+  goToShare(){
+    wx.navigateTo({
+      url: '/pages/share/share',
+    })
+  },
+  goToOpenApi(){
+    wx.navigateTo({
+      url: '/pages/openApi/openApi',
     })
   }
 })

@@ -1,0 +1,9 @@
+<view class="margin-sm">
+  <camera device-position="back" flash="off" binderror="reject" style="width:100%;height:200px;"></camera>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="getCameraContext">获取相机实例</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="tokephoto" disabled="{{!cameraContext}}">拍照</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="startRecord" disabled="{{!cameraContext}}">开始录像</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="stopRecord" disabled="{{!cameraContext}}">结束录像</button>
+  <image wx:if="{{takePhotoUrl}}" src="{{takePhotoUrl}}" style="width:100%;"></image>
+  <video wx:if="{{videoUrl}}" src="{{videoUrl}}" style="width:100%;"></video>
+</view>

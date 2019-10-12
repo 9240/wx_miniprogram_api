@@ -20,4 +20,5 @@
   <button class="cu-btn round margin-sm bg-blue shadow" bindtap="includePoints">缩放视野展示所有经纬度(工具测试无效)</button>
   <button class="cu-btn round margin-sm bg-blue shadow" bindtap="moveToLocation">移到当前定位点或指定位置</button>
   <button class="cu-btn round margin-sm bg-blue shadow" bindtap="translateMarker">移到marker</button>
+  <button class="cu-btn round margin-sm bg-blue shadow" bindtap="startLocationUpdateBackground">开启接收位置信息</button>
 </view>
